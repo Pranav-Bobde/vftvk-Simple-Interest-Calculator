@@ -3,11 +3,9 @@ function compute()
     var amount = document.getElementById("principal").value;
 
     if(amount <= 0) {
-        alert("Enter a positive number");
+        alert("Enter a positive number.");
         document.getElementById("principal").focus();
     }
-  
-
     var rateval = document.getElementById("rate").value; 
 
     var yr = document.getElementById("years").value;
