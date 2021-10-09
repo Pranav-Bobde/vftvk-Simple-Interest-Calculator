@@ -1,16 +1,44 @@
+<!DOCTYPE html>
 <html>
     <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class="box">
+            <h1 style="color:#808080;">Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+            <div style="margin-left: 50px">
+                <div>
+                    <label for="principal">Amount</label>
+                    <input style="margin-left: 78px" type="number"  id="principal">
+                </div>
+                <br>
+                <div>
+                    <label for="rate">Interest Rate</label>
+                    <input type="range" id="rate" name="rate" min="1" max="20" step="0.25"  oninput="this.nextElementSibling.value = this.value">
+                    <output>10.25</output><span>%</span>   
+                </div>
+                <br>
+                <div>
+                    <label for="years">No. of Years</label>
+                    <input type="number" id="years">
+                </div>
+                <br>
+                 
+                <button onclick="compute()">Compute Interest</button>
+    
+                 <div class="result">
+                    <p>If you deposit <span class="display" id="amt"></span> </br>
+                    at an interest <span class="display" id="rateOfInterest"></span></br>
+                    You will receive an amount of  <span class="display" id="final"></span></br>
+                    in the year <span class="display" id="year"></span></p>
+                 </div>   
+            </div>
+            
+            <footer>
+                &#169; This Calculator belongs to Pranav
+            </footer>
+        </div>
     </body>
 </html>
